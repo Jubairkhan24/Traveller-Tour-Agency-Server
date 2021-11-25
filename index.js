@@ -29,7 +29,6 @@ async function run() {
         app.get('/services', async (req, res) => {
             const cursor = servicesCollection.find({});
             const services = await cursor.toArray();
-            // console.log('this is editable comment')
             res.send(services);
         });
 
